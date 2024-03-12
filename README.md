@@ -13,9 +13,16 @@ cd news-app
 Install dependencies:
 ------------------------------
 
-1.npm install -D tailwindcss postcss autoprefixer
-2.npx tailwindcss init -p
-3.tailwind.config.js
+1.
+```bash
+    npm install -D tailwindcss postcss autoprefixer
+
+2.
+```bash
+npx tailwindcss init -p
+3.
+```bash
+tailwind.config.js
 
 /** @type {import('tailwindcss').Config} */
 export default {

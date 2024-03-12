@@ -11,18 +11,42 @@ Navigate to the project directory:
 
 cd news-app
 Install dependencies:
+------------------------------
 
-npm install
-Configuration
+1.npm install -D tailwindcss postcss autoprefixer
+2.npx tailwindcss init -p
+3.tailwind.config.js
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+4.index.css
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#Configuration
 Create a .env file in the root of your project.
 Add your News API key to the .env file:
 makefile
 Copy code
-REACT_APP_NEWS_API_KEY=your-api-key
-Running the App
+VITE_NEWS_API_KEY=1ca4ca46085e46a8b1028d50dfa20106
 Start the development server:
 
 npm run dev
++h
++o
 Open your browser and visit http://localhost:5000 to view the app.
 Country Selection
 Use the dropdown menu to select a country for top headlines.
@@ -30,8 +54,9 @@ Use the dropdown menu to select a country for top headlines.
 Dependencies
 ---------------------
 React
-Axios
+Axios - npm install axios
 tailwindcss
+react router - npm i react-router-dom
 Other dependencies...
 Contributing
 

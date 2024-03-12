@@ -72,8 +72,8 @@ const NewsList = () => {
         {news.map((article, index) => (
           <article key={index} className="overflow-hidden rounded-lg border border-gray-100 m-2 bg-white shadow-sm">
             <img
-              alt=""
-              src={article.urlToImage}
+              alt={article.name}
+              src={article.urlToImage ? article.urlToImage : '../assets/photo.avif'}
               className="h-56 w-full object-fill"
             />
 

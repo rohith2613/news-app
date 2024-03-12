@@ -12,7 +12,7 @@ const NewsList = () => {
     const fetchNews = async () => {
       try {
         const response = await axios.get(
-          `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=1ca4ca46085e46a8b1028d50dfa20106`
+          `https://newsapi.org/v2/top-headlines?country=${country}&apiKey=${import.meta.env.VITE_NEWS_API_KEY}`
         );
 
         // Extract date and time components
